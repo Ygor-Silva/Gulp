@@ -4,7 +4,7 @@ const concat = require('gulp-concat')
 const cssmin = require('gulp-cssmin')
 const rename = require('gulp-rename')
 const uglify = require('gulp-uglify')
-const image = require('gulp-image')
+const image = require('gulp-imagemin')
 const stripJs = require('gulp-strip-comments')
 const stripCss = require('gulp-strip-css-comments')
 const htmlmin = require('gulp-htmlmin')
@@ -18,8 +18,7 @@ function tarefasCSS(cb) {
             './node_modules/bootstrap/dist/css/bootstrap.css',
             './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
             './vendor/owl/css/owl.css',
-            './vendor/jquery-ui/jquery-ui.css',
-            './src/css/style.css'
+            './vendor/jquery-ui/jquery-ui.css'
         ])
         .pipe(stripCss())                   // remove comentários css   
         .pipe(concat('styles.css'))         // mescla arquivos
