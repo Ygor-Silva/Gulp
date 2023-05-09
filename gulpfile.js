@@ -72,7 +72,7 @@ function tarefasImagem(){
 // POC - Proof of Concept
 function tarefasHTML(callback){
 
-    gulp.src('projeto/src/**/*.html')
+    gulp.src('./src/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('./dist'))
 
